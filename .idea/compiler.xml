@@ -2,6 +2,7 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Annotation profile for Spring Security" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
@@ -16,8 +17,16 @@
         <module name="03-jwt-authentication" />
         <module name="07-session-based-security" />
         <module name="06-ldap-authentication" />
-        <module name="02-basic-authentication" />
         <module name="01-form-authentication" />
+      </profile>
+      <profile name="Annotation profile for 02-basic-authentication" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.18.36/lombok-1.18.36.jar" />
+        </processorPath>
+        <module name="02-basic-authentication" />
       </profile>
     </annotationProcessing>
   </component>
